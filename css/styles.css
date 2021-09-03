@@ -649,3 +649,46 @@ footer {
   box-shadow: 1px 1px 5px var(--company-color);
   
 }
+
+/******************* Модалка********/
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--timing) var(--cubik);
+}
+
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+  visibility: unset;
+}
+
+.modal{
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--light-text-color);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close{
+  background-image: url(../images/close.svg);
+  background-color: var(--light-text-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 0px solid var(--light-text-color);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+}
