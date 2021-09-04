@@ -6,8 +6,8 @@
   --light-text-color: #ffffff;
   --second-color: #2196f3;
   --company-color: #afb1b8;
-  --timing:250ms;
-  --cubik:cubic-bezier(0.4, 0, 0.2, 1);
+  --timing: 250ms;
+  --cubik: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /***Общее**/
 html {
@@ -44,8 +44,6 @@ ul {
   transition-timing-function: var(--cubik);
 }
 
-
-
 .list {
   list-style: none;
 }
@@ -62,7 +60,7 @@ ul {
   flex-wrap: wrap;
 }
 
-.flashing-icons{
+.flashing-icons {
   transition-property: fill, border;
   transition-duration: var(--timing);
   transition-timing-function: var(--cubik);
@@ -83,15 +81,14 @@ ul {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-  
 }
-.active-link::after{
-  content: '';
+.active-link::after {
+  content: "";
   position: absolute;
   display: block;
   left: 0;
   bottom: 0;
-  
+
   width: 100%;
   height: 4px;
   border-radius: 4px;
@@ -128,7 +125,6 @@ ul {
   padding-bottom: 32px;*/
 
   display: flex;
-  
 }
 .for-mailto,
 .for-tel {
@@ -136,8 +132,6 @@ ul {
   align-items: center;
   display: inline-flex;
   margin-right: 10px;
-
-
 }
 .for-mailto:hover,
 .for-tel:hover {
@@ -283,27 +277,29 @@ ul {
   margin-bottom: 50px;
 }
 
-.action-jpeg{
+.action-jpeg {
   position: relative;
 }
 .action-jpeg:not(:last-child) {
   margin-right: 30px;
 }
 
-.action-text{
+.action-text {
   height: 70px;
   width: 100%;
   position: absolute;
   bottom: 0;
+  display: flex;
 
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding-top: 27px;
+  /***padding-top: 27px;*/
 
   color: var(--light-text-color);
   background-color: rgba(47, 48, 58, 0.8);
@@ -342,11 +338,11 @@ ul {
 .team-introduction {
   padding-bottom: 94px;
   padding-top: 94px;
-  background-color: #F5F4FA;
+  /**background-color: #F5F4FA;*/
 }
 .social-list {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   padding-bottom: 30px;
 }
 .team-link {
@@ -357,7 +353,7 @@ ul {
   justify-content: center;
   fill: var(--company-color);
   border-radius: 50%;
-  background-color:transparent;
+  background-color: transparent;
 
   transition-property: background-color, fill;
   transition-duration: var(--timing);
@@ -398,8 +394,6 @@ ul {
   border-radius: 4px;
   fill: var(--company-color);
   border: 1px solid var(--company-color);
-
-
 }
 .company:hover,
 .company:focus {
@@ -480,7 +474,7 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color:rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   fill: var(--light-text-color);
 
   transition-property: background-color;
@@ -506,7 +500,6 @@ footer {
 .company-list-item:not(:last-child) {
   margin-right: 30px;
 }
-
 
 .foot-and-injoy {
   display: flex;
@@ -583,22 +576,21 @@ footer {
 
 .info-project {
   padding: 20px 24px;
-  
 }
-.thumb{
+.thumb {
   position: relative;
   overflow: hidden;
 }
 
-.project-topic{
+.project-topic {
   position: absolute;
   width: 100%;
-  height: calc(100% - 110px);
+  /*height: calc(100% - 110px);*/
+  height: 100%;
   top: 100%;
   left: 0;
-  text-align:left;
+  text-align: left;
   padding: 63px 24px;
-  
 
   font-style: normal;
   font-weight: normal;
@@ -613,11 +605,11 @@ footer {
   transition-property: opacity, transform;
   transition-duration: var(--timing);
   transition-timing-function: var(--cubik);
-  
 }
-.thumb:hover .project-topic{
+.thumb:hover .project-topic {
   opacity: 1;
-  transform: translateY(calc(-100% - 110px));
+  transform: translateY(-100%);
+  /*transform: translateY(calc(-100% - 110px));*/
 }
 
 .company-name {
@@ -647,11 +639,10 @@ footer {
   color: var(--light-text-color);
   background-color: var(--second-color);
   box-shadow: 1px 1px 5px var(--company-color);
-  
 }
 
 /******************* Модалка********/
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -662,13 +653,13 @@ footer {
   transition: opacity var(--timing) var(--cubik);
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: unset;
 }
 
-.modal{
+.modal {
   min-width: 528px;
   min-height: 581px;
   background-color: var(--light-text-color);
@@ -679,7 +670,7 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-.close{
+.close {
   background-image: url(../images/close.svg);
   background-color: var(--light-text-color);
   background-repeat: no-repeat;
